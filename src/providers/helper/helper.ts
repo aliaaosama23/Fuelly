@@ -7,7 +7,7 @@ export class HelperProvider {
    long:any;
    FulleyToken:any
    language:any
-  base_url:string='http://myfuelly.com/api/v1/'
+  base_url:string=''
   constructor(public http: HttpClient) {
     console.log('Hello HelperProvider Provider');
   }
