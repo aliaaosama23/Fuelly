@@ -1,0 +1,55 @@
+<ion-header style="background-color:#000;">
+  <ion-navbar>
+    <ion-row>
+      <ion-col col-1 (click)="Menu()" style="margin-top: 13px !important;">
+          <ion-icon name="md-menu" style="color: #F4821F;    font-size: 33px;"></ion-icon>
+      </ion-col>
+      <ion-col col-11 style="    margin-top: 15px;text-align: center;">
+        <ion-title style="margin-top: -6px;color:white;   ">{{"home"|translate}}</ion-title>
+      </ion-col>
+    </ion-row>
+  </ion-navbar>
+</ion-header>
+<ion-content padding style="background-color: #000000;">
+  <ion-row>
+    <ion-col col-4></ion-col>
+    <ion-col col-8>
+      <div style="margin-top: 20%;text-align: center;">
+        <img style="width: 70%;" src="assets/imgs/1.png">
+      </div>
+    </ion-col>
+  </ion-row>
+
+
+    <ion-row style="margin-top: 2%;">
+        <ion-col col-1></ion-col>
+        <ion-col col-10>
+            <button style="border-radius: 10px;"  ion-button outline block (click)="scan()" color="custom">
+                <span style="color: white;font-size: 20px;line-height: 29px;    margin-top: -3px;"> {{"code scan"|translate}} </span>
+              </button>
+        </ion-col>
+        <ion-col col-1></ion-col>
+    </ion-row>
+
+
+
+    <ion-row style="margin-top:10%;">
+      <ion-col col-3>
+        <p style="color: white;font-size: 18px;white-space: nowrap;">  {{ "order code"|translate}}  : </p>
+      </ion-col>
+      <ion-col col-9>
+        <p *ngIf="dataScanned" style="color:white;text-align: center;font-size: 18px;">  {{dataScanned.text}} </p>
+      </ion-col>
+    </ion-row>
+
+    <!-- <ion-row *ngIf="dataScanned" style="margin-top: 20%;">
+
+      <ion-col col-12>
+          <button [disabled]="chargeBefore" style="border-radius: 10px;"  ion-button outline block (click)="showDetails()" color="custom">
+              <span style="color: white;font-size: 20px;line-height: 29px;    margin-top: -3px;"> {{"show order details"|translate}} </span>
+            </button>
+      </ion-col>
+
+    </ion-row> -->
+
+</ion-content>

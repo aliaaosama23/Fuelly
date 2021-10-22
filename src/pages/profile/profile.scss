@@ -1,0 +1,49 @@
+page-profile {
+  ion-item.item.item-block.item-md.item-input.item-label-floating{
+    background-color:#000;
+  }
+  ion-item.item.item-block.item-ios.item-input.item-label-floating{
+    background-color:#000;
+  }
+  input.text-input.text-input-md{
+    color:white
+  }
+  input.text-input.text-input-ios{
+    color:white
+  }
+  .item-input-has-focus .label-md[floating], .input-has-focus .label-md[floating], .item-input-has-value .label-md[floating], .input-has-value .label-md[floating] {
+    -webkit-transform: matrix;
+    transform: translate3d(0px, 10px, 10px);
+}
+.item-input-has-focus .label-ios[floating], .input-has-focus .label-ios[floating], .item-input-has-value .label-ios[floating], .input-has-value .label-ios[floating] {
+  -webkit-transform: matrix;
+  transform: translate3d(0px, 10px, 10px);
+}
+.toolbar-background-md {
+  border-color: #000 !important;
+  background: #000 !important;
+}
+ion-item.item.item-block.item-md.item-input.item-label-floating{
+  background-color:#000;
+}
+.toolbar-title-md {
+  padding: 0 12px;
+  font-size: 2rem;
+  font-weight: 500;
+   color: #fff;
+}
+//-------------------------------ios ---------------------------//
+.toolbar-background-ios {
+border-color: #000 !important;
+background: #000 !important;
+}
+ion-item.item.item-block.item-ios.item-input.item-label-floating{
+background-color:#000;
+}
+.toolbar-title-ios {
+padding: 0 12px;
+font-size: 2rem;
+font-weight: 500;
+ color: #fff;
+}
+}

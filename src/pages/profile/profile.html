@@ -1,0 +1,80 @@
+<ion-header style="background-color:#000;">
+    <ion-navbar hideBackButton>
+      <ion-row>
+          <ion-col col-1 (click)="back()">
+            <ion-icon style="color:white;    font-size: 28px !important;" name="md-arrow-forward"></ion-icon>
+          </ion-col>
+          <ion-col col-10 style="text-align: center;">
+              <ion-title style="margin-top: -4px;color:white;   ">{{"Profile"|translate}}</ion-title>
+          </ion-col>
+          <ion-col col-1 (click)="edit()">
+              <ion-icon style="color:white;    font-size: 25px !important;" name="md-create"></ion-icon>
+            </ion-col>
+      </ion-row>
+    </ion-navbar>
+  </ion-header>
+
+<ion-content padding style="background-color: #000;">
+    <div >
+          <div>
+            <ion-row>
+              <ion-col col-5 style="color:#F4821F;text-align: right;font-size: 20px;">
+                {{ "email"|translate}}
+              </ion-col>
+              <ion-col col-7></ion-col>
+            </ion-row>
+          </div>
+          <ion-item style="    border-bottom: 1px solid gray;background-color: #000;">
+            <!-- <ion-label floating style="color:#F4821F"> </ion-label> -->
+            <ion-input  readonly [value]="Email"  type="text"></ion-input>
+          </ion-item>
+
+          <div>
+              <ion-row>
+                <ion-col col-5 style="color:#F4821F;text-align: right;font-size: 20px;">
+                    {{"user name"|translate}}
+                </ion-col>
+                <ion-col col-7></ion-col>
+              </ion-row>
+            </div>
+          <ion-item  style="    border-bottom: 1px solid gray;background-color: #000;">
+              <!-- <ion-label floating style="color:#F4821F">اسم المستخدم</ion-label> -->
+              <ion-input readonly [value]="Name" type="text"></ion-input>
+          </ion-item>
+
+          <div>
+              <ion-row>
+                <ion-col col-5 style="color:#F4821F;text-align: right;font-size: 20px;">
+                    {{"password"|translate}}
+                </ion-col>
+                <ion-col col-7></ion-col>
+              </ion-row>
+          </div>
+
+          <ion-item  style="    border-bottom: 1px solid gray;background-color: #000;">
+            <!-- <ion-label floating style="color:#F4821F">كلمة المرور</ion-label> -->
+            <!-- <ion-input  [value]="Password" type="password"></ion-input> -->
+            <div>
+                <ion-row >
+                  <ion-col *ngIf="!show" col-5 style="color:white;text-align: right;font-size: 20px;">
+                      <span >
+                             ******
+                      </span>
+                  </ion-col>
+                  <ion-col *ngIf="show" col-5 style="color:white;text-align: right;font-size: 20px;">
+                      {{Password}}
+                   </ion-col>
+                  <ion-col col-6></ion-col>
+                  <ion-col col-1>
+                    <ion-icon *ngIf="!show" (click)="showPass()"  name="ios-eye" style="color: #F4821F;font-size: 26px;"> </ion-icon>
+                    <ion-icon *ngIf="show" (click)="showPass()"  name="ios-eye-off" style="color: #F4821F;font-size: 26px;"> </ion-icon>
+                  </ion-col>
+                </ion-row>
+              </div>
+          </ion-item>
+
+
+
+
+      </div>
+</ion-content>

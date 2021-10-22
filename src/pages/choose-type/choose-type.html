@@ -1,0 +1,32 @@
+
+<ion-content style="background-color: #000000;" >
+
+  <div style="margin-top: 30%;text-align: center;">
+    <img   style="    width: 57%;"src="assets/imgs/1.png">
+  </div>
+
+  <ion-row style="margin-top: 60%;">
+    <ion-col col-1></ion-col>
+    <ion-col col-10>
+       <button [ngClass]="isselected?'selected':'notselected'" style="border-radius: 10px;" outline block round ion-button color="custom"  (click)="choose('station',true,false)">
+         <span style="color: white;font-size: 20px;line-height: 29px;    margin-top: -3px;">
+         {{"Station"|translate}}
+          </span>
+       </button>
+    </ion-col>
+    <ion-col col-1></ion-col>
+  </ion-row>
+
+  <ion-row>
+      <ion-col col-1></ion-col>
+      <ion-col col-10>
+        <button [ngClass]="isselected1?'selected':'notselected'" style="border-radius: 10px;" outline block round ion-button color="custom"  (click)="choose('user',false,true)">
+          <span style="color: white;font-size: 20px;line-height: 29px;    margin-top: -3px;">
+            {{"User"|translate}}
+            </span>
+        </button>
+      </ion-col>
+      <ion-col col-1></ion-col>
+  </ion-row>
+
+</ion-content>

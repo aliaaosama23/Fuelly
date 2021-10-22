@@ -1,0 +1,123 @@
+page-requests {
+  ion-label{
+    color: #F4821F;
+  }
+
+  .item{
+    background-color:#000;
+  }
+  .card-background-page {
+
+    ion-card {
+      position: relative;
+      text-align: center;
+    }
+
+    .card-title {
+      position: absolute;
+      top: 71%;
+      font-size: 20pxem;
+      width: 100%;
+      font-weight: bold;
+      color: #fff;
+    }
+
+    .card-subtitle {
+      font-size: 1.0em;
+      position: absolute;
+      top: 81%;
+      width: 100%;
+      color: #fff;
+    }
+
+  }
+  //------------------------------- md -----------------------------------//
+  item-radio-checked.item-md ion-label {
+    color: #F4821F !important;
+}
+  .toolbar-background-md {
+    border-color: #000 !important;
+    background: #000 !important;
+}
+  ion-item.item.item-block.item-md.item-input.item-label-floating{
+    background-color:#000;
+  }
+  .toolbar-title-md {
+    padding: 0 12px;
+    font-size: 2rem;
+    font-weight: 500;
+     color: #fff;
+}
+.list-md .item-block .item-inner {
+  border-bottom: unset !important;
+}
+.radio-md .radio-inner {
+  left: 2px;
+  top: 2px;
+  border-radius: 50%;
+  position: absolute;
+  width: 8px;
+  height: 8px;
+  background-color: #F4821F;
+}
+.radio-md .radio-checked {
+  border-color: #F4821F;
+}
+.card-md{
+  margin: 10px 0px 0px 0px !important;
+  width: 100%;
+}
+.segment-md .segment-button.activated, .segment-md .segment-button.segment-activated {
+  border-color: #F4821F;
+  opacity: 1;
+}
+.segment-md .segment-button {
+  font-size: 2.2rem;
+  color: #F4821F;
+}
+//-------------------------------  ios ------------------------------------//
+item-radio-checked.item-ios ion-label {
+  color: #F4821F !important;
+}
+.toolbar-background-ios {
+  border-color: #000 !important;
+  background: #000 !important;
+}
+  ion-item.item.item-block.item-ios.item-input.item-label-floating{
+    background-color:#000;
+  }
+.toolbar-title-ios {
+  padding: 0 12px;
+  font-size: 2rem;
+  font-weight: 500;
+   color: #fff;
+}
+.list-ios .item-block .item-inner {
+  border-bottom: unset !important;
+}
+.radio-ios .radio-inner {
+  left: 2px;
+  top: 2px;
+  border-radius: 50%;
+  position: absolute;
+  width: 8px;
+  height: 8px;
+  background-color: #F4821F;
+}
+.radio-ios .radio-checked {
+  border-color: #F4821F;
+}
+.card-ios{
+  margin: 0px !important;
+  width: 100%;
+}
+
+.segment-ios .segment-button.activated, .segment-ios .segment-button.segment-activated {
+  border-color: #F4821F;
+  opacity: 1;
+}
+.segment-ios .segment-button {
+  font-size: 2.2rem;
+  color: #F4821F;
+}
+}

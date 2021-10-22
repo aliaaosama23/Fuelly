@@ -1,0 +1,82 @@
+page-application-form {
+  ion-item.item.item-block.item-md {
+    background-color: unset !important;
+}
+ion-item.item.item-block.item-ios {
+  background-color: unset !important;
+}
+  ion-item.item.item-block.item-md.item-input.item-label-floating{
+    background-color:#000;
+  }
+  ion-item.item.item-block.item-ios.item-input.item-label-floating{
+    background-color:#000;
+  }
+  input.text-input.text-input-md{
+    color:white
+  }
+  input.text-input.text-input-ios{
+    color:white
+  }
+  .item-input-has-focus .label-md[floating], .input-has-focus .label-md[floating], .item-input-has-value .label-md[floating], .input-has-value .label-md[floating] {
+    -webkit-transform: matrix;
+    transform: translate3d(0px, 10px, 10px);
+}
+.item-input-has-focus .label-ios[floating], .input-has-focus .label-ios[floating], .item-input-has-value .label-ios[floating], .input-has-value .label-ios[floating] {
+  -webkit-transform: matrix;
+  transform: translate3d(0px, 10px, 10px);
+}
+  ion-input#file1{
+    opacity: 0;
+  }
+  ion-input#file2{
+    opacity: 0;
+  }
+  ion-input#file3{
+    opacity: 0;
+  }
+  .fileUpload {
+    position: relative;
+    overflow: hidden;
+}
+.fileUpload input.upload {
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin: 0;
+    padding: 0;
+    font-size: 20px;
+    cursor: pointer;
+    opacity: 0;
+    filter: alpha(opacity=0);
+}
+.fileUpload1 input.upload {
+  position: relative;
+  top: 0;
+  right: 0;
+  margin: 0;
+  padding: 0;
+  font-size: 20px;
+  cursor: pointer;
+  opacity: 0;
+  filter: alpha(opacity=0);
+}
+.label-md{
+  margin: 0px;
+}
+.label-ios{
+  margin: 0px;
+}
+
+.item-md.item-input.ng-invalid.ng-touched:not(.input-has-focus):not(.item-input-has-focus) .item-inner
+{
+  border-bottom-color: unset !important;
+  -webkit-box-shadow: unset !important;
+  box-shadow: unset !important;
+}
+.item-md.item-input.item-input-has-focus.item-inner,
+.item-md.item-input.input-has-focus.item-inner{
+  border-bottom-color: unset !important;
+  -webkit-box-shadow: unset !important;
+  box-shadow: unset !important;
+}
+}

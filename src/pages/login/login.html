@@ -1,0 +1,153 @@
+<ion-content  style="background-color: #000000;">
+  <ion-row *ngIf="language=='en'">
+    <ion-col col-1></ion-col>
+   <ion-col col-1 style="height: 40px;width: 32px;border-radius: 0 0 10px 10px;background-color: #F4821F;" >
+     <span (click)="change('ar')" style="white-space: nowrap;height: 17px;width: 20px;color: #FFF;font-size: 16.61px;font-weight: 500;line-height: 23px;text-align: center; " > Ar</span>
+   </ion-col>
+   <ion-col col-10></ion-col>
+  </ion-row>
+  <ion-row *ngIf="language=='ar'">
+    <ion-col col-1></ion-col>
+   <ion-col col-1 style="height: 40px;width: 32px;border-radius: 0 0 10px 10px;background-color: #F4821F;" >
+     <span (click)="change('en')" style=" white-space: nowrap;height: 17px;width: 20px;color: #FFF;font-size: 16.61px;font-weight: 500;line-height: 23px;text-align: center; " > En</span>
+   </ion-col>
+   <ion-col col-10></ion-col>
+  </ion-row>
+    <div style="margin-top: 14%;text-align: center;">
+      <img style="    width: 57%;" src="assets/imgs/1.png">
+    </div>
+
+    <div id="login_form" *ngIf="login" style="padding: 16px !important;">
+      <form [formGroup]="myForm_login" (ngSubmit)="logForm_login()" style="margin-top: 15%;">
+        <ion-item style="    border-bottom: 1px solid gray;">
+          <ion-label floating style="color:#F4821F">{{ "email"|translate}} </ion-label>
+          <ion-input formControlName="Email" type="email"></ion-input>
+        </ion-item>
+
+        <div *ngIf="!myForm_login.get('Email').valid && myForm_login.get('Email').touched" >
+          <p style="color:gray; margin: 2px 12px;    text-align: center;">
+            {{"enter email in correct way"|translate}}
+          </p>
+        </div>
+
+        <ion-item  style="    border-bottom: 1px solid gray;">
+          <ion-label floating style="color:#F4821F">{{"password"|translate}}</ion-label>
+          <ion-input formControlName="Password" type="password"></ion-input>
+        </ion-item>
+
+        <div *ngIf="!myForm_login.get('Password').valid && myForm_login.get('Password').touched"  >
+          <p style="color:gray; margin: 2px 12px;    text-align: center;">
+           {{"password must be at least 6 letters"|translate}}
+          </p>
+        </div>
+
+        <ion-row style="margin-top: 10%;">
+          <ion-col col-1></ion-col>
+          <ion-col col-10>
+            <button [disabled]="!myForm_login.valid" type="submit"  style="border-radius: 10px;" outline block round ion-button color="custom" >
+              <span style="color: white;font-size: 20px;line-height: 29px;    margin-top: -3px;"> {{"login"|translate}} </span>
+            </button>
+          </ion-col>
+          <ion-col col-1></ion-col>
+        </ion-row>
+        <ion-row *ngIf="!worker" style="text-align: center;">
+          <ion-col col-1></ion-col>
+          <ion-col col-10 (click)="forget_password()">
+            <span style="color:#F4821F;text-align: center;">
+                {{"forget password"|translate}}
+            </span>
+          </ion-col>
+          <ion-col col-1></ion-col>
+        </ion-row>
+        <ion-row  *ngIf="!worker" style="text-align: center;">
+            <ion-col col-1></ion-col>
+            <ion-col col-10 (click)="signup()">
+              <span style="color:#F4821F;text-align: center;">
+                 {{"register"|translate}}
+              </span>
+            </ion-col>
+            <ion-col col-1></ion-col>
+        </ion-row>
+
+      </form>
+    </div>
+    <div id="register_form" *ngIf="!login" style="padding: 16px !important;">
+        <form [formGroup]="myForm_register" (ngSubmit)="logForm_register()" style="margin-top: 15%;">
+          <ion-item  style="    border-bottom: 1px solid gray;">
+            <ion-label floating style="color:#F4821F">{{ "email"|translate}}  </ion-label>
+            <ion-input formControlName="Email" type="email"></ion-input>
+          </ion-item>
+
+          <div *ngIf="!myForm_register.get('Email').valid && myForm_register.get('Email').touched" >
+            <p style="color:gray; margin: 2px 12px;    text-align: center;">
+             {{"enter email in correct way"|translate}}
+            </p>
+          </div>
+
+          <ion-item  style="border-bottom: 1px solid gray;">
+            <ion-label floating style="color:#F4821F"> {{"mobile number"|translate}} </ion-label>
+            <ion-input formControlName="Phone" type="number"></ion-input>
+          </ion-item>
+
+          <div *ngIf="!myForm_register.get('Phone').valid && myForm_register.get('Phone').touched" >
+            <p style="color:gray; margin: 2px 12px;    text-align: center;">
+              {{"enter mobile number"|translate}}
+            </p>
+          </div>
+
+          <ion-item  style="border-bottom: 1px solid gray;">
+              <ion-label floating style="color:#F4821F">{{"user name"|translate}} </ion-label>
+              <ion-input formControlName="Name" type="text"></ion-input>
+          </ion-item>
+
+          <div *ngIf="!myForm_register.get('Name').valid && myForm_register.get('Name').touched" >
+            <p style="color:gray; margin: 2px 12px;    text-align: center;">
+            {{"enter user name"|translate}}
+            </p>
+          </div>
+
+          <ion-item  style="border-bottom: 1px solid gray;">
+            <ion-label floating style="color:#F4821F">{{"password"|translate}}</ion-label>
+            <ion-input formControlName="Password" type="password"></ion-input>
+          </ion-item>
+
+          <div *ngIf="!myForm_register.get('Password').valid && myForm_register.get('Password').touched" >
+            <p style="color:gray; margin: 2px 12px;    text-align: center;">
+              {{"password must be at least 6 letters"|translate}}
+            </p>
+          </div>
+
+          <ion-item  style="border-bottom: 1px solid gray;">
+              <ion-label floating style="color:#F4821F"> {{"password confirmation"|translate}}</ion-label>
+              <ion-input formControlName="PasswordConfrim" type="password"></ion-input>
+          </ion-item>
+
+          <div *ngIf="myForm_register.get('PasswordConfrim').value!= myForm_register.get('Password').value" >
+            <p style="color:gray; margin: 2px 12px;    text-align: center;">
+              {{"both passwords are not equal"|translate}}
+            </p>
+          </div>
+
+          <ion-row style="margin-top: 10%;">
+            <ion-col col-1></ion-col>
+            <ion-col col-10>
+              <button [disabled]="!myForm_register.valid" type="submit"  style="border-radius: 10px;" outline block round ion-button color="custom" >
+                <span style="color: white;font-size: 20px;line-height: 29px;    margin-top: -3px;"> {{"register"|translate}}  </span>
+              </button>
+            </ion-col>
+            <ion-col col-1></ion-col>
+          </ion-row>
+
+          <ion-row style="text-align: center;">
+              <ion-col col-1></ion-col>
+              <ion-col col-10 (click)="signin()">
+                <span style="color:#F4821F;text-align: center;">
+                  {{"login"|translate}}
+                </span>
+              </ion-col>
+              <ion-col col-1></ion-col>
+            </ion-row>
+
+        </form>
+      </div>
+</ion-content>

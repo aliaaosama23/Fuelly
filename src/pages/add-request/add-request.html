@@ -1,0 +1,68 @@
+
+<ion-content style="background-color:rgba(0,0,0, 0.5) !important">
+
+    <ion-row style="margin-bottom: 40%;">
+      <ion-col col-1 (click)="dismiss()">
+          <ion-icon  style="color:white;font-size: 25px;      margin-top: 13%;
+          margin-right: 53%;" name="ios-arrow-forward-outline"></ion-icon>
+      </ion-col>
+      <ion-col col-11></ion-col>
+    </ion-row>
+
+    <ion-row>
+        <ion-col col-2></ion-col>
+        <ion-col col-8>
+            <div style="background-color:#fff;border-radius:10px;height: 176px;">
+                <div style="text-align: center;color: white;padding: 16px 0" >
+
+                  <div style="position: relative;text-align: center;color: white;" >
+                    <img  src="assets/imgs/Group.png" >
+                    <div style="position: absolute;direction: ltr;font-size: 17px;top: 37%;right: 35%;">
+                      {{priceperliter}} <sub>  /L </sub>
+                    </div>
+                    <div style="position: absolute;direction: ltr;font-size: 18px;top: 58%;right: 35%;">
+                       {{type}}
+                     </div>
+                  </div>
+                  <ion-row style="    padding: 0px 17%;">
+                    <ion-col col-1></ion-col>
+                    <ion-col col-4>
+                        <img src="assets/imgs/Group (2).png">
+                        <ion-icon (click)="increase()" style="color: white;margin-top: 17%;position: absolute;right: 37%;font-size: 23px;" name="ios-add"></ion-icon>
+                    </ion-col>
+                    <ion-col col-2 style="text-align: center;color:black;">
+                            <span style="font-size: 20px;white-space: nowrap;">{{noofliters}}</span>
+                    </ion-col>
+                    <ion-col col-4>
+                        <img src="assets/imgs/Group (2).png">
+                        <ion-icon (click)="decrease()"style="color: white;margin-top: 13%;position: absolute;right: 37%;font-size: 23px;" name="ios-remove"></ion-icon>
+                    </ion-col>
+                    <ion-col col-1></ion-col>
+                  </ion-row>
+                </div>
+              </div>
+        </ion-col>
+        <ion-col col-2></ion-col>
+    </ion-row>
+
+
+    <div style="margin:26% 5% 0 5%;border-radius:21px;height: 48px;background-color:#F4821F" (click)="goPay()">
+        <ion-row>
+            <ion-col col-2>
+                <img src="assets/imgs/Group 4 (1).png">
+            </ion-col>
+            <ion-col col-7>
+            </ion-col>
+            <ion-col col-2>
+                <p style="white-space: nowrap;margin-top: -1%;color: white;" id="totalAmount">  $ {{noofliters * priceperliter}}</p>
+                <br>
+                <p style="white-space: nowrap;margin-top: -87%;color: white;">
+
+                <span> {{priceperliter}}</span>  <span> /L</span>
+
+                </p>
+            </ion-col>
+            <ion-col col-1></ion-col>
+        </ion-row>
+    </div>
+</ion-content>

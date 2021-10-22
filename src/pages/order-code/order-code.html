@@ -1,0 +1,22 @@
+<ion-header >
+    <ion-navbar hideBackButton>
+      <ion-row>
+          <ion-col col-1 (click)="back()">
+            <ion-icon style="color:black;    font-size: 28px !important;" name="md-arrow-forward"></ion-icon>
+          </ion-col>
+          <ion-col col-10 style="text-align: center;">
+              <ion-title style="margin-top: -4px;color:white;   ">{{ "order code"|translate}} </ion-title>
+          </ion-col>
+          <ion-col col-1 (click)="share()">
+              <ion-icon style="color:black;    font-size: 28px !important;" name="md-share"></ion-icon>
+            </ion-col>
+      </ion-row>
+
+    </ion-navbar>
+  </ion-header>
+
+<ion-content padding>
+    <div style="margin-top: 20%;text-align: center;">
+        <img style="width: 100%;" src="http://myfuelly.com/public/uploads/{{img}}">
+    </div>
+</ion-content>

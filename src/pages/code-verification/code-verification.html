@@ -1,0 +1,53 @@
+<ion-content padding style="background-color: #000000;">
+    <div style="margin-top: 20%;text-align: center;">
+      <img  src="assets/imgs/1.png">
+    </div>
+
+
+    <form [formGroup]="myForm" (ngSubmit)="logForm()" style="margin-top: 15%;" (keydown.enter)="$event.preventDefault()">
+
+
+      <ion-row>
+          <ion-col col-3>
+              <ion-item style="background-color: #86858563">
+                  <ion-input  style="direction: ltr;"   type="number" #otp4 class="otp" pattern="[0-9]{6}" maxlength="1" size="1"  formControlName="codeInput4" ></ion-input>
+                </ion-item>
+          </ion-col>
+          <ion-col col-3>
+              <ion-item style="background-color: #86858563">
+                  <ion-input   style="direction: ltr;" type="number" #otp3 class="otp" pattern="[0-9]{6}" maxlength="1" size="1"  (keyup)="next(otp4)"formControlName="codeInput3"></ion-input>
+              </ion-item>
+          </ion-col>
+          <ion-col col-3>
+              <ion-item style="background-color: #86858563">
+                  <ion-input  style="direction: ltr;"  type="number" #otp2 class="otp" pattern="[0-9]{6}" maxlength="1" size="1" (keyup)="next(otp3)" formControlName="codeInput2"></ion-input>
+              </ion-item>
+          </ion-col>
+          <ion-col col-3>
+              <ion-item style="background-color: #86858563">
+                  <ion-input  style="direction: ltr;"  type="number" #otp1 class="otp" pattern="[0-9]{6}" maxlength="1" size="1" (keyup)="next(otp2)" formControlName="codeInput1"></ion-input>
+              </ion-item>
+          </ion-col>
+      </ion-row>
+
+      <ion-row style="margin-top: 20%;">
+        <ion-col col-1></ion-col>
+        <ion-col col-10>
+            <button style="border-radius: 10px;"  ion-button outline block type="submit" color="custom">
+                <span style="color: white;font-size: 20px;line-height: 29px;    margin-top: -3px;"> {{"Send"|translate}} </span>
+              </button>
+        </ion-col>
+        <ion-col col-1></ion-col>
+      </ion-row>
+
+      <ion-row>
+          <ion-col col-3></ion-col>
+          <ion-col col-6 (click)="resendCode()">
+            <h4 style="color:#F4821F;text-align: center;font-size: 16px;">  {{"ResendCode"|translate}} </h4>
+          </ion-col>
+          <ion-col col-3></ion-col>
+      </ion-row>
+
+    </form>
+
+</ion-content>

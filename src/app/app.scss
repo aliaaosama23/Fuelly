@@ -1,0 +1,196 @@
+* ::-webkit-scrollbar{
+  display: none;
+}
+
+body {
+    -webkit-user-select: text;
+    user-select: text;
+}
+.menu-inner {
+  width: 67%;
+  background: transparent !important;
+}
+input.searchbar-input {
+  border-radius: 10px;
+}
+.searchbar-search-icon {
+  text-align: right;
+  right: 10px;
+}
+div#toast-hdr-0 {
+  background-color: #f4821f;
+}
+// ion-content.menu{
+// 	ion-list {
+// 		.item {
+// 			background: transparent;
+// 		}
+// 	}
+// }
+// .menu-inner{
+//   background-color:transparent !important;
+// }
+#mysidemnu
+{
+    background: transparent !important;
+}
+* ::-webkit-scrollbar{
+  display: none;
+}
+.input-cover { position: static; }
+
+.has-refresher  .scroll-content {
+  border-top: 0 !important;
+
+}
+//----------------------------md-------------------------//
+.item-md.item-block .item-inner{
+  border-bottom: unset !important;
+}
+.item-md .item-input .item-input-has-focus .item-inner,
+.item-md .item-input .input-has-focus .item-inner{
+  border-bottom-color:unset !important;
+  -webkit-box-shadow: unset !important;
+  box-shadow: unset !important;
+}
+.item-md.item-input.ng-valid.item-input-has-value:not(.input-has-focus):not(.item-input-has-focus)
+.item-inner, .item-md.item-input.ng-valid.input-has-value:not(.input-has-focus):not(.item-input-has-focus) .item-inner {
+  border-bottom-color:unset !important;
+  -webkit-box-shadow: unset !important;
+  box-shadow: unset !important;
+}
+.item-md.item-input.ng-invalid.ng-touched:not(.input-has-focus):not(.item-input-has-focus)
+ .item-inner {
+ // border-bottom-color:unset !important;
+  -webkit-box-shadow: unset !important;
+  box-shadow: unset !important;
+}
+
+.header-md::after,
+ .tabs-md[tabsPlacement="top"] > .tabbar::after,
+  .footer-md::before,
+   .tabs-md[tabsPlacement="bottom"] > .tabbar::before {
+  left: 0;
+  bottom: -5px;
+  background-position: left 0 top -2px;
+  position: absolute;
+  width: 100%;
+  height: 5px;
+  background-image: unset !important;
+  background-repeat: repeat-x;
+  content: "";
+}
+
+.toolbar-background-md {
+  border-color: #fff !important;
+  background: #fff !important;
+}
+
+.searchbar-md .searchbar-search-icon {
+  left: 0px !important;
+  right: 10px;
+  top: 11px;
+  width: 21px;
+  height: 21px;
+}
+
+item-md.item-block .item-inner {
+  //padding-right: 8px;
+  border-bottom: 1px solid #dedede;
+}
+.item-md.item-input.input-has-focus .item-inner {
+  border-bottom-color: transparent !important;
+  box-shadow: none !important;
+}
+//-------------------------ios-----------------------//
+.item-ios.item-block .item-inner{
+  border-bottom: unset !important;
+}
+.item-ios.item-input.ng-valid.item-input-has-value:not(.input-has-focus):not(.item-input-has-focus) .item-inner, .item-ios.item-input.ng-valid.input-has-value:not(.input-has-focus):not(.item-input-has-focus) .item-inner {
+  border-bottom-color:unset !important;
+  -webkit-box-shadow: unset !important;
+  box-shadow: unset !important;
+}
+.item-ios.item-input.ng-invalid.ng-touched:not(.input-has-focus):not(.item-input-has-focus) .item-inner {
+ // border-bottom-color:unset !important;
+  -webkit-box-shadow: unset !important;
+  box-shadow: unset !important;
+}
+
+item-ios.item-input.ng-valid.item-input-has-value:not(.input-has-focus):not(.item-input-has-focus) .item-inner, .item-ios.item-input.ng-valid.input-has-value:not(.input-has-focus):not(.item-input-has-focus) .item-inner {
+ // border-bottom-color:unset !important;
+  -webkit-box-shadow: unset !important;
+  box-shadow: unset !important;
+}
+
+.item-ios .item-input .item-input-has-focus .item-inner,
+.item-ios .item-input .input-has-focus .item-inner{
+  //border-bottom-color:unset !important;
+  -webkit-box-shadow: unset !important;
+  box-shadow: unset !important;
+}
+.header-ios::after, .tabs-ios[tabsPlacement="top"] > .tabbar::after, .footer-ios::before, .tabs-ios[tabsPlacement="bottom"] > .tabbar::before {
+  left: 0;
+  bottom: -5px;
+  background-position: left 0 top -2px;
+  position: absolute;
+  width: 100%;
+  height: 5px;
+  background-image: unset !important;
+  background-repeat: repeat-x;
+  content: "";
+}
+
+.toolbar-background-ios {
+  border-color: #fff  !important;
+  background: #fff  !important;
+}
+
+.searchbar-ios .searchbar-search-icon {
+  left: 0px !important;
+  right: 10px;
+  top: 11px;
+  width: 21px;
+  height: 21px;
+}
+
+.item-ios.item-block .item-inner,
+.item-ios.item-input.input-has-focus .item-inner,
+.item-ios.item-input.ng-valid.input-has-value:not(.input-has-focus) .item-inner,
+.item-ios.item-input.ng-invalid.ng-touched:not(.input-has-focus) .item-inner,
+.list-ios .item-input.input-has-focus:last-child,
+.list-ios .item-input.ng-valid.input-has-value:not(.input-has-focus):last-child,
+.list-ios .item-input.ng-invalid.ng-touched:not(.input-has-focus):last-child {
+    border-bottom: none;
+    box-shadow: none;
+}
+.list-ios .item-input.input-has-focus:last-child .item-inner,
+.list-ios .item-input.ng-valid.input-has-value:not(.input-has-focus):last-child .item-inner,
+.list-ios .item-input.ng-invalid.ng-touched:not(.input-has-focus):last-child .item-inner {
+    box-shadow: none;
+}
+.item-ios.item-input.item-input-has-focus.item-inner,.item-ios.item-input.input-has-focus.item-inner{
+  border-bottom-color: unset !important ;
+  -webkit-box-shadow: unset !important ;
+  box-shadow: unset !important ;
+
+}
+.item-ios.item-input.ng-valid.item-input-has-value:not(.input-has-focus):not(.item-input-has-focus) .item-inner, .item-ios.item-input.ng-valid.input-has-value:not(.input-has-focus):not(.item-input-has-focus) .item-inner {
+ // border-bottom-color: unset !important ;
+  -webkit-box-shadow: unset !important ;
+  box-shadow: unset !important ;
+}
+.item-ios.item-input.ng-invalid.ng-touched:not(.input-has-focus):not(.item-input-has-focus) .item-inner {
+//border-bottom-color: unset !important ;
+-webkit-box-shadow: unset !important ;
+box-shadow: unset !important ;
+}
+
+item-ios.item-block .item-inner {
+  //padding-right: 8px;
+  border-bottom: 1px solid #dedede;
+}
+.item-ios.item-input.input-has-focus .item-inner {
+  border-bottom-color: transparent !important;
+  box-shadow: none !important;
+}

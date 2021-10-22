@@ -1,0 +1,67 @@
+<ion-content  style="background-color: #000;text-align: center;">
+      <ion-row style="margin-top:15%">
+        <ion-col col-6 style="padding: 0px !important;background-color:#F4821F">
+        </ion-col>
+        <ion-col col-4>
+          <img  src="assets/imgs/1.png">
+        </ion-col>
+        <ion-col col-2 style="padding: 0px !important;background-color:#F4821F">
+        </ion-col>
+      </ion-row>
+      <ion-card style="border-radius: 5px;    margin-top: 10%;">
+        <ion-card-content style="padding: 0px;">
+            <div>
+                <div style="text-align: center;padding-right: 8%;">
+                    <p style="font-size: 3.4rem;">  {{orderDetails.service_name}}</p>
+                </div>
+                <div *ngIf="dir==true" style="   text-align: right;padding-right: 8%;">
+                      <h1> {{"UserName"|translate}} </h1>
+                      <h3> {{orderDetails.user_name}} </h3>
+                </div>
+
+                <div *ngIf="dir==true" style="text-align: right;padding-right: 8%;">
+                  <h1> {{"station name"|translate}} </h1>
+                  <h3> {{orderDetails.station_name}}</h3>
+                </div>
+                <div *ngIf="dir==true" style="text-align: right;padding-right: 8%;">
+                  <h1> {{"LitersNumber"|translate}} </h1>
+                  <h3> {{orderDetails.liters}}</h3>
+                </div>
+                <div *ngIf="dir==true" style="text-align: right;padding-right: 8%;">
+                  <h1> {{"literPrice"|translate}} </h1>
+                  <h3> {{orderDetails.price}}</h3>
+                </div>
+
+                <div *ngIf="dir==false" style="text-align: left;padding-right: 8%;">
+                  <h1> {{"station name"|translate}} </h1>
+                  <h3> {{orderDetails.station_name}}</h3>
+                </div>
+                <div *ngIf="dir==false" style="text-align: left;padding-right: 8%;">
+                  <h1> {{"LitersNumber"|translate}} </h1>
+                  <h3> {{orderDetails.liters}}</h3>
+                </div>
+                <div *ngIf="dir==false" style="text-align: left;padding-right: 8%;">
+                  <h1> {{"literPrice"|translate}} </h1>
+                  <h3> {{orderDetails.price}}</h3>
+                </div>
+
+
+
+                <ion-row>
+                    <img src="assets/imgs/crop.png" style="width: 100%;">
+                </ion-row>
+                <ion-row>
+                  <ion-col col-1></ion-col>
+                  <ion-col col-10>
+                    <button  ion-button style="border-radius: 10px;" color="custom" (click)="fill()" block >
+                        <span style="color: #fff;font-size: 15px;text-align: center;">
+                           {{"Filled"|translate}}
+                        </span>
+                      </button>
+                  </ion-col>
+                  <ion-col col-1></ion-col>
+                </ion-row>
+            </div>
+        </ion-card-content>
+      </ion-card>
+</ion-content>

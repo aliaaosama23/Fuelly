@@ -1,0 +1,193 @@
+<ion-content padding style="background-color: #000000;">
+
+    <div style="text-align: left;">
+      <img  style="width:52%" src="assets/imgs/1.png">
+    </div>
+
+    <form [formGroup]="myForm" (ngSubmit)="logForm()" >
+
+      <div style="background-color: #000; border-bottom: 1px solid gray;">
+        <ion-row>
+          <ion-col col-6>
+            <div col-11 style="    margin-top: 4px;">
+              <span style="color: #F4821F;font-size: 14px;white-space: nowrap;;">
+                {{"AddStationLogo"|translate}}
+               </span>
+              </div>
+          </ion-col>
+          <ion-col col-5></ion-col>
+          <ion-col col-1>
+            <div class="fileUpload">
+              <ion-icon style="color:white;display: -webkit-box;margin-top: 9px;" name="md-camera"></ion-icon>
+              <input id="uploadBtn" type="file" class="upload" (change)="getfile_avatar($event)"/>
+            </div>
+          </ion-col>
+        </ion-row>
+        <ion-item  *ngIf="choosefile4">
+          <!-- <div style="color: white;margin-top: 11px;"   id="uploadFile"> {{file_Avatar}} </div> -->
+          <img *ngIf="choose_avatar" id="myAvatar" style="height: 100px;width:100%;" [src]="avatar">
+
+        </ion-item>
+      </div>
+
+          <!-- <div>
+              <ion-row>
+                <ion-col col-3></ion-col>
+                <ion-col col-6>
+                    <div *ngIf="!choose_avatar" id="myAvatar" style="color:white; font-size: 18px;text-align: center; background-color:#000;border:1.5px solid #F4821F; width: 100px;height: 100px;border-radius:50%;">
+                             {{"AddStationLogo"|translate}}
+                    </div>
+
+                    <img *ngIf="choose_avatar" id="myAvatar" style="height: 100px;width:100px;border-radius:50%;" [src]="avatar">
+
+                    <div>
+                        <ion-icon style="color: white;font-size: 20px;margin-right: 10px;;" name="md-camera"></ion-icon>
+                        <input id="uploadBtn" style="top: 170px;opacity: 0;" type="file" class="upload" (change)="getfile_avatar($event)"/>
+                    </div>
+                  </ion-col>
+                <ion-col col-3></ion-col>
+              </ion-row>
+          </div> -->
+
+          <ion-item style="border-bottom: 1px solid gray;">
+            <ion-label floating style="color:#F4821F">
+              <ion-row>
+                <ion-col col-3>{{"email"|translate}} </ion-col>
+                <ion-col col-9></ion-col>
+              </ion-row>
+            </ion-label>
+            <ion-input formControlName="Email" type="email"></ion-input>
+          </ion-item>
+          <div *ngIf="!myForm.get('Email').valid && myForm.get('Email').touched" >
+              <p style="color:#a69484a6; margin: 2px 12px;    text-align: center;">
+                 {{"AddEmail"|translate}}
+              </p>
+          </div>
+
+          <ion-item style="border-bottom: 1px solid gray;">
+              <ion-label floating style="color:#F4821F">
+                  <ion-row>
+                    <ion-col col-3>{{"station name"|translate}} </ion-col>
+                    <ion-col col-9></ion-col>
+                  </ion-row>
+              </ion-label>
+            <ion-input formControlName="StationName" type="text"></ion-input>
+          </ion-item>
+          <div *ngIf="!myForm.get('StationName').valid && myForm.get('StationName').touched" >
+              <p style="color:#a69484a6; margin: 2px 12px;    text-align: center;">
+                 {{"AddStationName"|translate}}
+              </p>
+          </div>
+
+          <ion-item style="border-bottom: 1px solid gray;">
+              <ion-label floating style="color:#F4821F">
+                  <ion-row>
+                    <ion-col col-3> {{"Address"|translate}} </ion-col>
+                    <ion-col col-9></ion-col>
+                  </ion-row>
+              </ion-label>
+            <ion-input formControlName="Address" type="text"></ion-input>
+          </ion-item>
+          <div *ngIf="!myForm.get('Address').valid && myForm.get('Address').touched" >
+              <p style="color:#a69484a6; margin: 2px 12px;    text-align: center;">
+                 {{"AddStationAddress"|translate}}
+              </p>
+          </div>
+
+          <ion-item style="    border-bottom: 1px solid gray;">
+              <ion-label floating style="color:#F4821F">
+                  <ion-row>
+                    <ion-col col-3>{{"MobileNumber"|translate}} </ion-col>
+                    <ion-col col-9></ion-col>
+                  </ion-row>
+              </ion-label>
+            <ion-input formControlName="Mobile" type="number"></ion-input>
+          </ion-item>
+          <div *ngIf="!myForm.get('Address').valid && myForm.get('Address').touched" >
+              <p style="color:#a69484a6; margin: 2px 12px;    text-align: center;">
+                {{"AddMobileNumber"|translate}}
+              </p>
+          </div>
+
+        <div style="background-color: #000; border-bottom: 1px solid gray;">
+          <ion-row>
+            <ion-col col-6>
+              <div col-11 style="    margin-top: 4px;">
+                <span style="color: #F4821F;font-size: 14px;white-space: nowrap;;">
+                 {{"Proof of station ownership"|translate}}
+                 </span>
+                </div>
+            </ion-col>
+            <ion-col col-5></ion-col>
+            <ion-col col-1>
+              <div class="fileUpload">
+                <ion-icon style="color:white;display: -webkit-box;margin-top: 9px;" name="md-camera"></ion-icon>
+                <input id="uploadBtn" type="file" class="upload" (change)="getfile1($event)"/>
+              </div>
+            </ion-col>
+          </ion-row>
+          <ion-item  *ngIf="choosefile1">
+            <div style="color: white;margin-top: 11px;"   id="uploadFile"> {{file11}} </div>
+          </ion-item>
+        </div>
+
+        <div style="background-color: #000; border-bottom: 1px solid gray;">
+          <ion-row>
+            <ion-col col-6>
+              <div col-11 style="    margin-top: 4px;">
+                <span style="color: #F4821F;font-size: 14px;white-space: nowrap;;">
+                  {{"Commercial license"|translate}}
+                 </span>
+                </div>
+            </ion-col>
+            <ion-col col-5></ion-col>
+            <ion-col col-1>
+              <div class="fileUpload">
+                <ion-icon style="color:white;display: -webkit-box;margin-top: 9px;" name="md-camera"></ion-icon>
+                <input id="uploadBtn" type="file" class="upload" (change)="getfile2($event)"/>
+              </div>
+            </ion-col>
+          </ion-row>
+
+          <ion-item  *ngIf="choosefile2">
+            <div style="color: white;margin-top: 11px;"   id="uploadFile"> {{file12}} </div>
+          </ion-item>
+        </div>
+
+        <div style="background-color: #000; border-bottom: 1px solid gray;">
+          <ion-row>
+            <ion-col col-6>
+              <div col-11 style="    margin-top: 4px;">
+                <span style="color: #F4821F;font-size: 14px;white-space: nowrap;;">
+                  {{"National identity card"|translate}}
+                 </span>
+                </div>
+            </ion-col>
+            <ion-col col-5></ion-col>
+            <ion-col col-1>
+              <div class="fileUpload">
+                <ion-icon style="color:white;display: -webkit-box;margin-top: 9px;" name="md-camera"></ion-icon>
+                <input id="uploadBtn" type="file" class="upload" (change)="getfile3($event)"/>
+              </div>
+            </ion-col>
+          </ion-row>
+
+          <ion-item  *ngIf="choosefile3" style="background-color: unset;">
+            <div style="color: white;margin-top: 11px;"   id="uploadFile"> {{file13}} </div>
+          </ion-item>
+          </div>
+
+          <!-- [disabled]="!myForm.valid" -->
+          <ion-row style="margin-top: 10%;">
+            <ion-col col-1></ion-col>
+            <ion-col col-10>
+              <button  type="submit"  style="border-radius: 10px;" outline block round ion-button color="custom" >
+                <span style="color: white;font-size: 20px;line-height: 29px;"> {{"Send"|translate}} </span>
+              </button>
+            </ion-col>
+            <ion-col col-1></ion-col>
+          </ion-row>
+
+    </form>
+
+</ion-content>

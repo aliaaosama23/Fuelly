@@ -1,0 +1,29 @@
+<ion-menu [content]="content" side="right" type="overlay"  id="mysidemnu" >
+
+  <ion-content style="background-color:#F4821F">
+      <ion-row>
+          <ion-col col-10></ion-col>
+          <ion-col col-1>
+            <ion-icon style="color:white;font-size: 25px;" name="md-close" (click)="close()"></ion-icon>
+          </ion-col>
+          <ion-col col-1></ion-col>
+        </ion-row>
+    <ion-list *ngIf="type=='user'" no-lines style="margin-top: 30%;">
+      <button style="background-color:#F4821F;text-align: center;
+      font-size: 20px;" menuClose ion-item *ngFor="let p of pagesuser" (click)="openPage(p)">
+        {{p.title|translate}}
+      </button>
+    </ion-list>
+
+    <ion-list *ngIf="type=='worker'" no-lines style="margin-top: 30%;">
+      <button style="background-color:#F4821F;text-align: center;
+      font-size: 20px;" menuClose ion-item *ngFor="let p of pagesworker" (click)="openPage(p)">
+        {{p.title|translate}}
+      </button>
+    </ion-list>
+  </ion-content>
+
+</ion-menu>
+
+<!-- Disable swipe-to-go-back because it's poor UX to combine STGB with side menus -->
+<ion-nav [root]="rootPage" #content swipeBackEnabled="false"></ion-nav>
